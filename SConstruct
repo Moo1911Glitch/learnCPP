@@ -1,6 +1,7 @@
 env = Environment()
 
-env['ENV']['PATH'] = ['E:/Moo/llvm-mingw-20250305-ucrt-x86_64/bin']
+# env['ENV']['PATH'] = ['E:/Moo/llvm-mingw-20250305-ucrt-x86_64/bin']
+env['ENV']['PATH'] = ['E:/Moo/TDMGCC64/bin']
 # -fsanitize=address not work on gcc mingw
 # env['BUILDERS']['CustomCC'] = Builder(action='g++ -c -g -Wall -DPDCDEBUG -fsanitize=address  -fno-omit-frame-pointer -o$TARGET $SOURCE')
 env['BUILDERS']['CustomCC'] = Builder(action='g++ -c -O2 -Wall -o$TARGET $SOURCE')
